@@ -1,1 +1,40 @@
-wabulabadabda
+<!DOCTYPE html>
+<html>
+
+        <head>
+                <meta charset="utf-8">
+                <title>It is next testing page</title>
+
+                <style>
+
+                        </style>
+        </head>
+
+        <body>
+            <h1>Диалоговое окно, отображающее, сколько миллисекунд прошло между инициализацией переменной timer, 
+                выполнением цикла for до завершения и вызовом переменной timer в качестве функции</h1>
+                <script>
+                        function stopWatch() {
+                                var startTime = Date.now();
+
+                                function getDelay() {
+                                        var elapsedTime = Date.now() - startTime;
+                                        alert(elapsedTime + " " + "миллисекунд")
+                                }
+                                return getDelay;
+                        }
+                        let timer = stopWatch()
+
+                        // сделать что-нибудь за некоторое время
+
+                        for (let i = 0; i < 1000000; i++) {
+                                let foo = Math.random() * 10000;
+                        }
+
+                        // вызвать возвращаемую функцию
+
+                        timer();
+                        </script>
+        </body>
+
+</html>
